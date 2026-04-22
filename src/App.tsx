@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, ExternalLink, MessageCircle, MousePointerClick, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, ExternalLink, MessageCircle, MousePointerClick, Target, TrendingUp, Download, FileText, Presentation } from 'lucide-react';
 import lucasImg from '@/imagens/lucas.jpg';
 
 const WHATSAPP_NUMBER = "5574999249182"; // Atualizado com o número do usuário
@@ -193,6 +193,70 @@ export default function App() {
                   <div className="text-zinc-400 text-sm">Aumento médio em conversões</div>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Presentations Section */}
+      <section className="py-16 md:py-24 px-6 bg-zinc-50 border-t border-zinc-100">
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...fadeIn} className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 text-zinc-900">
+              Propostas e <span className="text-brand-blue">Apresentações</span>
+            </h2>
+            <p className="text-zinc-600 max-w-2xl mx-auto text-base sm:text-lg">
+              Faça o download de nossos materiais e entenda detalhadamente como a nossa metodologia pode transformar os resultados da sua empresa.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Card 1 */}
+            <motion.div 
+              {...fadeIn}
+              className="bg-white p-8 rounded-2xl border border-zinc-200 hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5 transition-all duration-300 flex flex-col h-full group"
+            >
+              <div className="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                <FileText className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-3">
+                Sites para Advogados
+              </h3>
+              <p className="text-zinc-600 mb-8 flex-grow">
+                Descubra as estratégias de design, posicionamento e persuasão exclusivas que utilizamos para criar plataformas jurídicas de alta conversão.
+              </p>
+              <a 
+                href="/Apresentações/Proposta_Sites_Advogados.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 w-full py-4 bg-zinc-900 hover:bg-brand-blue text-white rounded-xl font-medium transition-colors"
+              >
+                <Download className="w-5 h-5" />
+                Baixar Apresentação (PDF)
+              </a>
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div 
+              {...fadeIn}
+              className="bg-white p-8 rounded-2xl border border-zinc-200 hover:border-brand-blue/30 hover:shadow-xl hover:shadow-brand-blue/5 transition-all duration-300 flex flex-col h-full group"
+            >
+              <div className="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-6 text-brand-blue group-hover:scale-110 transition-transform">
+                <Presentation className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-3">
+                Gestão de Tráfego Pago
+              </h3>
+              <p className="text-zinc-600 mb-8 flex-grow">
+                Entenda a nossa metodologia validada para escalar negócios através de anúncios estratégicos no Google Ads e Meta Ads com foco total em ROI.
+              </p>
+              <a 
+                href="/Apresentações/Proposta_Trafego_Pago.pptx"
+                download
+                className="inline-flex items-center justify-center gap-2 w-full py-4 bg-zinc-900 hover:bg-brand-blue text-white rounded-xl font-medium transition-colors"
+              >
+                <Download className="w-5 h-5" />
+                Baixar Apresentação (PPTX)
+              </a>
             </motion.div>
           </div>
         </div>
